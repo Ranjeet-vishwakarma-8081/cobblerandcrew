@@ -6,6 +6,15 @@ import gsap from "gsap";
 
 const Contact = () => {
   useGSAP(() => {
+    const init = async () => {
+      try {
+        await document.fonts.ready;
+      } catch (error) {
+        console.log("Error occurred -", error);
+      }
+    };
+    init();
+
     const titleSplit = SplitText.create("#contact h2", {
       type: "words",
     });

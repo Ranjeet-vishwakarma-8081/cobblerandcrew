@@ -11,6 +11,28 @@ const Menu = () => {
   const totalCocktails = allCocktails.length;
 
   useGSAP(() => {
+    const init = async () => {
+      try {
+        await document.fonts.ready;
+
+        const descriptionSplitLine = SplitText.create(".details p", {
+          type: "lines",
+        });
+
+        gsap.from(descriptionSplitLine.lines, {
+          opacity: 0,
+          yPercent: 100,
+          duration: 0.5,
+          ease: "expo.out",
+          stagger: 0.05,
+          delay: 0.7,
+        });
+      } catch (error) {
+        console.log("Error occurred -", error);
+      }
+    };
+    init();
+
     gsap
       .timeline({
         scrollTrigger: {
@@ -25,9 +47,6 @@ const Menu = () => {
       })
       .to("#m-left-leaf", { yPercent: -100 }, 0);
 
-    const descriptionSplitLine = new SplitText(".details p", {
-      type: "lines",
-    });
     gsap.fromTo("#title", { opacity: 0 }, { opacity: 1, duration: 1 });
 
     gsap.fromTo(
@@ -41,15 +60,6 @@ const Menu = () => {
       { opacity: 0, yPercent: 100 },
       { opacity: 1, yPercent: 0, duration: 1, ease: "power1.inOut" }
     );
-
-    gsap.from(descriptionSplitLine.lines, {
-      opacity: 0,
-      yPercent: 100,
-      duration: 0.5,
-      ease: "expo.out",
-      stagger: 0.05,
-      delay: 0.7,
-    });
   }, [currentIndex]);
 
   const goToSlide = (index) => {

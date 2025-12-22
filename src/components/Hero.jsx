@@ -9,30 +9,41 @@ const Hero = () => {
   const isMobile = useMediaQuery({ maxWidth: 767 });
 
   useGSAP(() => {
-    const heroSplit = new SplitText(".title", {
-      type: "chars, words",
-    });
-    const paragraphSplit = new SplitText(".subtitle", {
-      type: "lines",
-    });
+    let heroSplit;
+    let paragraphSplit;
 
-    heroSplit.chars.map((char) => char.classList.add("text-gradient"));
+    const init = async () => {
+      try {
+        await document.fonts.ready;
 
-    gsap.from(heroSplit.chars, {
-      yPercent: 100,
-      duration: 1.8,
-      ease: "expo.out",
-      stagger: 0.05,
-    });
+        heroSplit = new SplitText(".title", {
+          type: "chars, words",
+        });
+        paragraphSplit = new SplitText(".subtitle", {
+          type: "lines",
+        });
 
-    gsap.from(paragraphSplit.lines, {
-      opacity: 0,
-      yPercent: 100,
-      duration: 1.8,
-      ease: "expo.out",
-      stagger: 0.05,
-      delay: 1,
-    });
+        heroSplit.chars.map((char) => char.classList.add("text-gradient"));
+
+        gsap.from(heroSplit.chars, {
+          yPercent: 100,
+          duration: 1.8,
+          ease: "expo.out",
+          stagger: 0.05,
+        });
+
+        gsap.from(paragraphSplit.lines, {
+          opacity: 0,
+          yPercent: 100,
+          duration: 1.8,
+          ease: "expo.out",
+          stagger: 0.05,
+          delay: 1,
+        });
+      } catch (error) {
+        console.error("GSAP SplitText initialization failed:", error);
+      }
+    };
 
     gsap
       .timeline({
@@ -65,6 +76,12 @@ const Hero = () => {
       tl.to(videoRef.current, {
         currentTime: videoRef.current.duration,
       });
+    };
+    init();
+
+    return () => {
+      heroSplit?.revert?.();
+      paragraphSplit?.revert?.();
     };
   }, []);
 
