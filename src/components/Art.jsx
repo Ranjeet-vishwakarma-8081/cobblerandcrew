@@ -9,7 +9,7 @@ const Art = () => {
   });
 
   useGSAP(() => {
-    const start = isMobile ? "top 20%" : "top top";
+    const start = isMobile ? "top 10%" : "top top";
 
     const maskTimeline = gsap.timeline({
       scrollTrigger: {
@@ -43,7 +43,7 @@ const Art = () => {
 
   return (
     <div id="art">
-      <div className="container mx-auto h-full pt-20">
+      <div className="container mx-auto h-full md:py-20 py-16">
         <h2 className="will-fade">The Art</h2>
 
         <div className="content">
@@ -51,7 +51,7 @@ const Art = () => {
             {goodLists.map((feature, index) => (
               <li key={index} className="flex items-center gap-2">
                 <img src="/images/check.png" alt="check" />
-                <p>{feature}</p>
+                <p className="md:w-fit w-56">{feature}</p>
               </li>
             ))}
           </ul>
@@ -68,7 +68,7 @@ const Art = () => {
             {featureLists.map((feature, index) => (
               <li key={index} className="flex items-center justify-start gap-2">
                 <img src="/images/check.png" alt="check" />
-                <p className="md:w-fit w-60">{feature}</p>
+                <p className="md:w-fit w-56">{feature}</p>
               </li>
             ))}
           </ul>

@@ -100,7 +100,7 @@ const Contact = () => {
                 rel="noopener noreferrer"
                 aria-label={name}
               >
-                <img src={icon} />
+                <img src={icon} className="size-6 md:size-8" />
               </a>
             ))}
           </div>
