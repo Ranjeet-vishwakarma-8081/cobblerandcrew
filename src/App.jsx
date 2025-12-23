@@ -7,12 +7,14 @@ import About from "./components/About";
 import Art from "./components/Art";
 import Menu from "./components/Menu";
 import Contact from "./components/Contact";
+import WhatsAppWidget from "./components/WhatsaAppWidget";
 
 gsap.registerPlugin(ScrollTrigger, SplitText);
 const App = () => {
   return (
     <main className="selection:bg-green-700">
       <Navbar />
+      <WhatsAppWidget />
       <Hero />
       <Cocktails />
       <About />
