@@ -79,7 +79,7 @@ const Navbar = () => {
   return (
     <nav className="fixed top-0 left-0 w-full z-50">
       {/* Top bar */}
-      <div className="flex items-center justify-between flex-row px-6 py-4">
+      <div className="flex items-center justify-between flex-row">
         <a href="#hero" className="flex items-center gap-2">
           <img src="/images/logo.png" alt="logo" className="w-8 h-8" />
           <span className="font-semibold text-lg hover:text-yellow">
@@ -111,17 +111,17 @@ const Navbar = () => {
           onClick={() => setIsOpen((prev) => !prev)}
         >
           <span
-            className={`absolute w-6 h-[2px] bg-white transition-transform ${
+            className={`absolute w-6 h-[2px] right-0.5 bg-white transition-transform ${
               isOpen ? "rotate-45" : "-translate-y-2"
             }`}
           />
           <span
-            className={`absolute w-6 h-[2px] bg-white transition-opacity ${
+            className={`absolute w-6 h-[2px] right-0.5 bg-white transition-opacity ${
               isOpen ? "opacity-0" : "opacity-100"
             }`}
           />
           <span
-            className={`absolute w-6 h-[2px] bg-white transition-transform ${
+            className={`absolute w-6 h-[2px] right-0.5 bg-white transition-transform ${
               isOpen ? "-rotate-45" : "translate-y-2"
             }`}
           />
