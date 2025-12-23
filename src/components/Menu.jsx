@@ -85,9 +85,9 @@ const Menu = () => {
               key={cocktail.id}
               className={`${
                 isActive
-                  ? "text-white border-white"
-                  : "text-white/50 border-white/50"
-              } hover:text-yellow`}
+                  ? "text-yellow border-yellow"
+                  : "text-[#e6dcc3]/50 border-[#e6dcc3]/50"
+              } hover:border-yellow hover:text-yellow`}
               onClick={() => goToSlide(index)}
             >
               {cocktail.name}

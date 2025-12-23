@@ -23,7 +23,7 @@ const Hero = () => {
           type: "lines",
         });
 
-        heroSplit.chars.map((char) => char.classList.add("text-gradient"));
+        // heroSplit.chars.map((char) => char.classList.add("text-gradient"));
 
         gsap.from(heroSplit.chars, {
           yPercent: 100,

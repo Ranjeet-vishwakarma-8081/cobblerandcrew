@@ -66,9 +66,9 @@ const WhatsAppWidget = () => {
         transition-all duration-300"
       >
         {open ? (
-          <IoClose className="text-white text-2xl" />
+          <IoClose className="text-[#e6dcc3] text-2xl" />
         ) : (
-          <FaWhatsapp className="text-white text-2xl" />
+          <FaWhatsapp className="text-[#e6dcc3] text-2xl" />
         )}
       </button>
 
@@ -116,7 +116,7 @@ const WhatsAppWidget = () => {
                 rel="noopener noreferrer"
                 className="block text-center rounded-lg py-2.5
                 bg-green-600 hover:bg-green-700
-                text-white font-medium tracking-wide
+                text-[#e6dcc3] font-medium tracking-wide
                 transition-colors"
               >
                 Start WhatsApp Chat

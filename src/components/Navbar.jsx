@@ -111,17 +111,17 @@ const Navbar = () => {
           onClick={() => setIsOpen((prev) => !prev)}
         >
           <span
-            className={`absolute w-6 h-[2px] right-0.5 bg-white transition-transform ${
+            className={`absolute w-6 h-[2px] right-0.5 bg-[#e6dcc3] transition-transform ${
               isOpen ? "rotate-45" : "-translate-y-2"
             }`}
           />
           <span
-            className={`absolute w-6 h-[2px] right-0.5 bg-white transition-opacity ${
+            className={`absolute w-6 h-[2px] right-0.5 bg-[#e6dcc3] transition-opacity ${
               isOpen ? "opacity-0" : "opacity-100"
             }`}
           />
           <span
-            className={`absolute w-6 h-[2px] right-0.5 bg-white transition-transform ${
+            className={`absolute w-6 h-[2px] right-0.5 bg-[#e6dcc3] transition-transform ${
               isOpen ? "-rotate-45" : "translate-y-2"
             }`}
           />

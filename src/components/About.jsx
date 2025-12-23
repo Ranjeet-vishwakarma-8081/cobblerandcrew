@@ -49,7 +49,7 @@ const About = () => {
           <div className="md:col-span-8">
             <p className="badge">Best Cocktails</p>
             <h2>
-              Where every detail matters <span className="text-white">-</span>
+              Where every detail matters <span className="">-</span>
               from muddle to garnish
             </h2>
           </div>
@@ -64,9 +64,7 @@ const About = () => {
               <p className="md:text-3xl text-xl font-bold">
                 <span>4.8</span>/5
               </p>
-              <p className="text-sm text-white-100">
-                More than +12000 customers
-              </p>
+              <p className="text-sm">More than +12000 customers</p>
             </div>
           </div>
         </div>

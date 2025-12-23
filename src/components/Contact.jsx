@@ -122,6 +122,7 @@ const Contact = () => {
               target="_blank"
               rel="noopener noreferrer"
               aria-label="Cobbler & Crew"
+              className="hover:text-yellow"
             >
               © {new Date().getFullYear()} Cobbler & Crew | Cocktails &
               Mocktails
@@ -133,6 +134,7 @@ const Contact = () => {
               target="_blank"
               rel="noopener noreferrer"
               aria-label="Developed by RanjeetTechSolutions™"
+              className="hover:text-yellow"
             >
               Developed by RanjeetTechSolutions™.
             </a>
