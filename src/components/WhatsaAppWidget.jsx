@@ -79,7 +79,7 @@ const WhatsAppWidget = () => {
           animate-in fade-in slide-in-from-bottom-4 duration-300"
         >
           <div
-            className="rounded-2xl bg-black text-[#f5e9c8]
+            className="rounded-2xl bg-black
           shadow-2xl border border-[#0f1f17]"
           >
             {/* Header */}
@@ -102,7 +102,7 @@ const WhatsAppWidget = () => {
             </div>
 
             {/* Body */}
-            <div className="px-3 py-2  text-sm leading-relaxed text-[#e6dcc3]">
+            <div className="px-3 py-2  text-sm leading-relaxed">
               Planning a visit, event, or custom drink?
               <br />
               Chat directly with our crew on WhatsApp.
