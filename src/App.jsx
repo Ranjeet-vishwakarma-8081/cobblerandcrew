@@ -11,7 +11,7 @@ import Contact from "./components/Contact";
 gsap.registerPlugin(ScrollTrigger, SplitText);
 const App = () => {
   return (
-    <main>
+    <main className="selection:bg-green-700">
       <Navbar />
       <Hero />
       <Cocktails />

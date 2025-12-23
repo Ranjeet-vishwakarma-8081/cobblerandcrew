@@ -126,7 +126,7 @@ body {
           }
 
           a {
-            @apply font-semibold opacity-80 2xl:text-start text-center text-yellow;
+            @apply font-semibold opacity-80 2xl:text-start text-center;
           }
         }
       }
@@ -355,7 +355,7 @@ body {
     }
 
     .content {
-      @apply container mx-auto 2xl:pt-32 2xl:pb-16 lg:pt-16 lg:pb-8 pt-12 pb-6 flex flex-col justify-between gap-10 min-h-dvh;
+      @apply container mx-auto 2xl:pt-32 2xl:pb-16 lg:pt-16 lg:pb-8 pt-12 pb-6 flex flex-col justify-between items-center gap-10 min-h-dvh;
 
       h2 {
         @apply lg:text-6xl 2xl:text-8xl text-5xl font-modern-negra md:translate-y-0 translate-y-5;

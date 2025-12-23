@@ -115,7 +115,9 @@ const Hero = () => {
                 creative flair, and timeless recipes — designed to delight your
                 senses.{" "}
               </p>
-              <a href="#cocktails">View Cocktails</a>
+              <a href="#cocktails" className="hover:text-yellow">
+                View Cocktails
+              </a>
             </div>
           </div>
         </div>

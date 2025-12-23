@@ -82,7 +82,9 @@ const Navbar = () => {
       <div className="flex items-center justify-between flex-row px-6 py-4">
         <a href="#hero" className="flex items-center gap-2">
           <img src="/images/logo.png" alt="logo" className="w-8 h-8" />
-          <span className="font-semibold text-lg">Velvet Pour</span>
+          <span className="font-semibold text-lg hover:text-yellow">
+            Cobbler & Crew
+          </span>
         </a>
 
         {/* Desktop menu */}
@@ -91,7 +93,7 @@ const Navbar = () => {
             <li key={link.id}>
               <a
                 href={`#${link.id}`}
-                className={`transition-colors ${
+                className={`transition-colors hover:text-yellow ${
                   active === link.id ? "text-yellow" : ""
                 }`}
               >

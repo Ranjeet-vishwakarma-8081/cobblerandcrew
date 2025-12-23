@@ -44,7 +44,7 @@ const Cocktails = () => {
                     {country} | {detail}
                   </p>
                 </div>
-                <span>- {price}</span>
+                <span>{price}</span>
               </li>
             ))}
           </ul>
@@ -60,7 +60,7 @@ const Cocktails = () => {
                     {country} | {detail}
                   </p>
                 </div>
-                <span>- {price}</span>
+                <span>{price}</span>
               </li>
             ))}
           </ul>

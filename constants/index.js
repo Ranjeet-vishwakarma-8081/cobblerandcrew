@@ -19,55 +19,67 @@ const navLinks = [
 
 const cocktailLists = [
   {
-    name: "Chapel Hill Shiraz",
-    country: "AU",
-    detail: "Battle",
-    price: "$10",
+    name: "Old Fashioned",
+    country: "USA",
+    detail: "Bourbon whiskey (60ml), sugar cube, aromatic bitters, orange peel",
+    price: "₹650",
   },
   {
-    name: "Caten Malbee",
-    country: "AU",
-    detail: "Battle",
-    price: "$49",
+    name: "Margarita",
+    country: "Mexico",
+    detail: "Tequila (50ml), triple sec, fresh lime juice, salted rim",
+    price: "₹550",
   },
   {
-    name: "Rhino Pale Ale",
-    country: "CA",
-    detail: "750 ml",
-    price: "$20",
+    name: "Mojito",
+    country: "Cuba",
+    detail: "White rum (50ml), fresh mint, lime juice, sugar, soda",
+    price: "₹500",
   },
   {
-    name: "Irish Guinness",
-    country: "IE",
-    detail: "600 ml",
-    price: "$29",
+    name: "Negroni",
+    country: "Italy",
+    detail: "Gin (30ml), Campari (30ml), sweet vermouth (30ml)",
+    price: "₹600",
+  },
+  {
+    name: "Espresso Martini",
+    country: "UK",
+    detail: "Vodka (45ml), coffee liqueur, freshly brewed espresso",
+    price: "₹620",
   },
 ];
 
 const mockTailLists = [
   {
-    name: "Tropical Bloom",
-    country: "US",
-    detail: "Battle",
-    price: "$10",
+    name: "Virgin Mojito",
+    country: "Cuba",
+    detail: "Fresh mint, lime juice, sugar syrup, soda (250ml)",
+    price: "₹280",
   },
   {
-    name: "Passionfruit Mint",
-    country: "US",
-    detail: "Battle",
-    price: "$49",
+    name: "Berry Blast Cooler",
+    country: "International",
+    detail: "Mixed berries, lemon juice, soda, crushed ice (300ml)",
+    price: "₹320",
   },
   {
-    name: "Citrus Glow",
-    country: "CA",
-    detail: "750 ml",
-    price: "$20",
+    name: "Mango Ginger Fizz",
+    country: "India",
+    detail: "Fresh mango puree, ginger syrup, lime, sparkling water (300ml)",
+    price: "₹300",
   },
   {
-    name: "Lavender Fizz",
-    country: "IE",
-    detail: "600 ml",
-    price: "$29",
+    name: "Cucumber Mint Refresher",
+    country: "Mediterranean",
+    detail: "Cucumber juice, mint, lemon, tonic water (280ml)",
+    price: "₹290",
+  },
+  {
+    name: "Pineapple Basil Smash",
+    country: "Tropical",
+    detail: "Fresh pineapple juice, basil, lime, soda (300ml)",
+    price: "₹310",
   },
 ];
 
@@ -102,25 +114,25 @@ const goodLists = [
 
 const storeInfo = {
   heading: "Where to Find Us",
-  address: "456, Raq Blvd. #404, Los Angeles, CA 90210",
+  address:
+    "Ground floor, Barons Club, North Ave, opposite Jogger's Park, Kalyani Nagar, Pune, Maharashtra 411006, India",
   contact: {
-    phone: "(555) 987-6543",
-    email: "hello@jsmcocktail.com",
+    phone: "(+91) 9325875685",
+    email: "d",
   },
 };
 
 const openingHours = [
-  { day: "Mon – Thu", time: "11:00am – 12am" },
-  { day: "Fri", time: "11:00am – 2am" },
-  { day: "Sat", time: "9:00am – 2am" },
-  { day: "Sun", time: "9:00am – 1am" },
+  { day: "Mon", time: "5:00pm - 11:55pm" },
+  { day: "Tue - Sat", time: "12:00pm - 11:55pm" },
+  { day: "Sun", time: "12:00pm - 4:30pm | 7pm - 11:55pm" },
 ];
 
 const socials = [
   {
     name: "Instagram",
     icon: "/images/insta.png",
-    url: "#",
+    url: "https://www.instagram.com/cobblerandcrew/",
   },
   {
     name: "X (Twitter)",
@@ -139,33 +151,33 @@ const allCocktails = [
     id: 1,
     name: "Classic Mojito",
     image: "/images/drink1.png",
-    title: "Simple Ingredients, Bold Flavor",
+    title: "Fresh, Crisp, Perfectly Balanced",
     description:
-      "Made with tequila, lime juice, and orange liqueur, the Margarita is easy to make and full of character. Add a salted rim for the perfect drink on summer nights.",
+      "A refreshing blend of lime juice, and sparkling soda. Light, cooling, and ideal for warm afternoons or relaxed evenings.",
   },
   {
     id: 2,
     name: "Raspberry Mojito",
     image: "/images/drink2.png",
-    title: "A Zesty Classic That Never Fails",
+    title: "A Fruity Twist on a Refreshing Favorite",
     description:
-      "The Margarita is a classic that balances tangy lime, smooth tequila, and a touch of sweetness. Shaken, frozen, or on the rocks—it’s always crisp & refreshing.",
+      "Delicately floral and lightly citrusy, this mocktail offers a smooth, aromatic experience with a refreshing sparkle.",
   },
   {
     id: 3,
     name: "Violet Breeze",
     image: "/images/drink3.png",
-    title: "Simple Ingredients, Bold Flavor",
+    title: "Floral Notes with a Cool Finish",
     description:
-      "Made with tequila, lime juice, and orange liqueur, the Margarita is easy to make and full of character. Add a salted rim for the perfect drink on summer nights.",
+      "Juicy raspberries meet fresh mint and lime, finished with a gentle fizz. Sweet, tangy, and irresistibly refreshing.",
   },
   {
     id: 4,
     name: "Curacao Mojito",
     image: "/images/drink4.png",
-    title: "Crafted With Care, Poured With Love",
+    title: "Bright Citrus with a Refreshing Spark",
     description:
-      "Each cocktail is made with fresh ingredients and a passion for perfecting every pour, whether you're celebrating or simply relaxing.",
+      "A vibrant blend of citrus flavors, fresh mint, and soda, delivering a bold yet balanced refreshment in every sip.",
   },
 ];
 

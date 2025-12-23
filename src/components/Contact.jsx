@@ -72,13 +72,10 @@ const Contact = () => {
 
         <div>
           <h3>Visit Our Bar</h3>
-          <p>456, Raq Blvd. #404, Los Angeles, CA 90210</p>
-        </div>
-
-        <div>
-          <h3>Contact Us</h3>
-          <p>(555) 987-6543</p>
-          <p>hello@jsmcocktails.com</p>
+          <p className="md:w-lg">
+            1st floor, Barons Club, Main Gate, opposite Jogger's Park, Pluto
+            Society, Kalyani Nagar, Pune, Maharashtra 411006, India
+          </p>
         </div>
 
         <div>
@@ -86,6 +83,18 @@ const Contact = () => {
           {openingHours.map(({ day, time }) => (
             <p key={day}>{`${day} : ${time}`}</p>
           ))}
+        </div>
+
+        <div>
+          <h3>Contact Us</h3>
+          <p>
+            <a href="tel:+919325875685">(+91) 9325875685</a>
+          </p>
+          <p>
+            <a href="mailto:marketing@cobblerandcrew.com?subject=Inquiry&body=Hi%20cobbler%20and%20crew,">
+              marketing@cobblerandcrew.com
+            </a>
+          </p>
         </div>
 
         <div>
