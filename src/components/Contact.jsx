@@ -114,6 +114,30 @@ const Contact = () => {
             ))}
           </div>
         </div>
+
+        <div className="flex justify-between gap-4 flex-col md:flex-row items-center w-3/4 pt-4">
+          <div>
+            <a
+              href="https://cobblerandcrew.vercel.app/"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="Cobbler & Crew"
+            >
+              © {new Date().getFullYear()} Cobbler & Crew | Cocktails &
+              Mocktails
+            </a>
+          </div>
+          <div>
+            <a
+              href="https://ranjeettechsolutions.vercel.app/"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="Developed by RanjeetTechSolutions™"
+            >
+              Developed by RanjeetTechSolutions™.
+            </a>
+          </div>
+        </div>
       </div>
     </footer>
   );
