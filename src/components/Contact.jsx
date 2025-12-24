@@ -55,6 +55,19 @@ const Contact = () => {
         },
         "<"
       );
+    gsap.from(".cobblerandcrew", {
+      xPercent: -100,
+      opacity: 0,
+      stagger: 0.02,
+      duration: 1,
+    });
+
+    gsap.from(".ranjeettechsolutions", {
+      xPercent: 100,
+      opacity: 0,
+      stagger: 0.02,
+      duration: 1,
+    });
   });
 
   return (
@@ -119,29 +132,25 @@ const Contact = () => {
         </div>
 
         <div className="flex justify-between gap-4 flex-col md:flex-row items-center w-3/4 pt-4">
-          <div>
-            <a
-              href="https://cobblerandcrew.vercel.app/"
-              target="_blank"
-              rel="noopener noreferrer"
-              aria-label="Cobbler & Crew"
-              className="hover:text-yellow"
-            >
-              © {new Date().getFullYear()} Cobbler & Crew | Cocktails &
-              Mocktails
-            </a>
-          </div>
-          <div>
-            <a
-              href="https://ranjeettechsolutions.vercel.app/"
-              target="_blank"
-              rel="noopener noreferrer"
-              aria-label="Developed by RanjeetTechSolutions™"
-              className="hover:text-yellow"
-            >
-              Developed by RanjeetTechSolutions™.
-            </a>
-          </div>
+          <a
+            href="https://cobblerandcrew.vercel.app/"
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="Cobbler & Crew"
+            className="cobblerandcrew hover:text-yellow"
+          >
+            © {new Date().getFullYear()} Cobbler & Crew | Cocktails & Mocktails
+          </a>
+
+          <a
+            href="https://ranjeettechsolutions.vercel.app/"
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="Developed by RanjeetTechSolutions™"
+            className="ranjeettechsolutions hover:text-yellow"
+          >
+            Developed by RanjeetTechSolutions™.
+          </a>
         </div>
       </div>
     </footer>
