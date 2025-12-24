@@ -6,6 +6,7 @@ import { SplitText } from "gsap/all";
 
 const Menu = () => {
   const [currentIndex, setCurrentIndex] = useState(0);
+  const [direction, setDirection] = useState("next");
   const contentRef = useRef();
 
   const totalCocktails = allCocktails.length;
@@ -24,30 +25,34 @@ const Menu = () => {
         yPercent: 100,
       })
       .to("#m-left-leaf", { yPercent: -100 }, 0);
+  });
 
-    gsap.fromTo("#title", { opacity: 0 }, { opacity: 1, duration: 1 });
+  useGSAP(() => {
+    const fromX = direction === "next" ? 100 : -100;
 
     gsap.fromTo(
       ".cocktail img",
-      { opacity: 0, xPercent: -100 },
-      { opacity: 1, xPercent: 0, duration: 1, ease: "power1.inOut" }
+      { opacity: 0, xPercent: fromX },
+      { opacity: 1, xPercent: 0, duration: 0.9, ease: "power3.inOut" }
     );
 
     gsap.fromTo(
-      ".details h2",
+      "#title",
       { opacity: 0, yPercent: 100 },
-      { opacity: 1, yPercent: 0, duration: 1, ease: "power1.inOut" }
+      { opacity: 1, yPercent: 0, duration: 0.6, ease: "power2.inOut" }
     );
+
     gsap.fromTo(
-      ".details p",
+      ".details h2, .details p",
       { opacity: 0, yPercent: 100 },
-      { opacity: 1, yPercent: 0, duration: 1, ease: "power1.inOut" }
+      { opacity: 1, yPercent: 0, duration: 1, ease: "power2.inOut" }
     );
   }, [currentIndex]);
 
-  const goToSlide = (index) => {
-    const newIndex = (index + totalCocktails) % totalCocktails;
-    setCurrentIndex(newIndex);
+  const goToSlide = (newIndex) => {
+    setDirection(newIndex > currentIndex ? "next" : "prev");
+    const wrappedIndex = (newIndex + totalCocktails) % totalCocktails;
+    setCurrentIndex(wrappedIndex);
   };
 
   const getCocktailAt = (indexOffSet) =>
@@ -103,7 +108,7 @@ const Menu = () => {
             onClick={() => goToSlide(currentIndex - 1)}
           >
             <span>{prevCocktail.name}</span>
-            <img src="/images/right-arrow.png" alt="right-arrow" aria-hidden />
+            <img src="/images/right-arrow.png" alt="right-arrow" />
           </button>
 
           <button
@@ -111,7 +116,7 @@ const Menu = () => {
             onClick={() => goToSlide(currentIndex + 1)}
           >
             <span>{nextCocktail.name}</span>
-            <img src="/images/left-arrow.png" alt="left-arrow" aria-hidden />
+            <img src="/images/left-arrow.png" alt="left-arrow" />
           </button>
         </div>
 
