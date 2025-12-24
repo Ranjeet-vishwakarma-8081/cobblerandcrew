@@ -82,7 +82,7 @@ const Navbar = () => {
       <div className="flex items-center justify-between flex-row">
         <a href="#hero" className="flex items-center gap-2">
           <img
-            src="/public/images/cobblerandcrew.png"
+            src="/images/cobblerandcrew.png"
             alt="logo"
             className="w-8 h-8 rounded-full"
           />
